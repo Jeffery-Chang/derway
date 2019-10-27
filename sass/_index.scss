@@ -1,0 +1,112 @@
+.index_main {
+    width: 100%;
+    height: 100%;
+    background: url('../img/mask.png') repeat, url('../img/bg_index.png') center right / cover;
+    background-attachment: fixed;
+    min-width: 1024px;
+    footer {
+        background: transparent;
+        color: #fff;
+    }
+}
+
+.index_newsBox {
+    @extend %Y50;
+    left: 0;
+    max-width: 480px;
+    @include media-min(1441px) {
+        left: 10%;
+    }
+}
+
+.tt_index {
+    width: 450px;
+    @extend %tt;
+}
+
+.index_news_list {
+    margin-left: 75px;
+    margin-top: -20px;
+    p {
+        font-size: 1.8rem;
+        font-weight: bold;
+        line-height: 26px;
+        text-align: left;
+        letter-spacing: 1px;
+        padding-left: 20px;
+    }
+    .timeBox {
+        font-weight: 700;
+        text-align: center;
+        @include size(52px);
+        background: #000;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-shrink: 0;
+        flex-wrap: wrap;
+    }
+    .year {
+        font-size: 1.5rem;
+        display: block;
+    }
+    .date {
+        font-size: 1.2rem;
+        display: block;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        color: #000;
+        @include trans;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 100%;
+            background: #000;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transition: width .3s ease 0s
+        }
+        &:hover {
+            color: #fff;
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.more {
+    color: $main;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include trans;
+    margin-top: 40px;
+    &:hover {
+        font-weight: 700;
+        .line {
+            width: 150px;
+        }
+    }
+    .line {
+        width: 50px;
+        background: $main;
+        height: 1px;
+        margin-right: 10px;
+        @include trans;
+    }
+    // span {
+    //     display: inline-block;
+    //     vertical-align: middle;
+    // }
+}

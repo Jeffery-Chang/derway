@@ -1,0 +1,67 @@
+extends ./include/layout
+include ./include/mixin
+block link
+	a.active(href="link.html") 聯絡我們
+block content
+	main.link_main
+		.tt_link
+			+png('tt_link')
+		.linkBox
+			.link_list
+				ul
+					li 
+						span.ic_link
+							+svg('ic_link')
+						a(href="https://www.judicial.gov.tw/index.asp" target='_blank') 司法院
+					li 
+						span.ic_link
+							+svg('ic_link')
+						a(href="https://www.moj.gov.tw/mp-001.html" target='_blank') 法務部
+					li 
+						span.ic_link
+							+svg('ic_link')
+						a(href="http://hlh.judicial.gov.tw/hlh/index.asp" target='_blank') 臺灣高等法院花蓮分院
+					li 
+						span.ic_link
+							+svg('ic_link')
+						a(href="http://hld.judicial.gov.tw/%5C/" target='_blank') 臺灣花蓮地方法院
+					li 
+						span.ic_link
+							+svg('ic_link')
+						a(href="https://www.hlc.moj.gov.tw/" target='_blank') 臺灣花蓮地方檢察署
+					li 
+						span.ic_link
+							+svg('ic_link')
+						a(href="https://www.hly.moj.gov.tw/" target='_blank') 法務部行政執行署花蓮分署
+			.link_list
+				ul
+					li 
+						span.ic_link
+							+svg('ic_link')
+						a(href="https://www.hl.gov.tw/" target='_blank') 花蓮縣政府
+					li 
+						span.ic_link
+							+svg('ic_link')
+						a(href="https://www.hl-land.gov.tw/bin/home.php" target='_blank') 花蓮地政事務所
+					li 
+						span.ic_link
+							+svg('ic_link')
+						a(href="https://hlhr.hl.gov.tw/bin/home.php" target='_blank') 花蓮戶政事務所
+					li 
+						span.ic_fb
+							+svg('ic_fb')
+						a(href="https://www.facebook.com/people/%E6%9B%BE%E6%B3%B0%E6%BA%90/100001855317022" target='_blank') 曾泰源律師個人頁面
+					li 
+						span.ic_fb
+							+svg('ic_fb')
+						a(href="https://www.facebook.com/profile.php?id=100000467795795" target='_blank') 林國泰律師個人頁面
+		include ./include/footer
+		block footer
+			.link_deco
+				+png('micky')
+
+
+
+
+
+

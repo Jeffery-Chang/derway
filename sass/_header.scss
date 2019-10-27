@@ -1,0 +1,128 @@
+// header
+header {
+    width: 100%;
+    max-width: 100%;
+    min-width: 1024px;
+    height: 85px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+    border-bottom: 1px solid rgba(black, 0.7);
+    z-index: 10;
+    @include m-1024 {
+        position: absolute;
+    }
+}
+
+.index_header {
+    height: 100px;
+    border-bottom: 1px solid rgba(white, 0.7);
+    background: rgba(0, 0, 0, 0.59);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.59) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.59)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.59) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.59) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.59) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.59) 0%, rgba(0, 0, 0, 0) 100%);
+    .logo {
+        width: 196px;
+    }
+    .pc_menu {
+        font-weight: 500;
+        a {
+            color: #fff;
+            &:after {
+                bottom: -36px;
+            }
+        }
+    }
+}
+
+.contact_header {
+    border-bottom: 1px solid rgba(white, 0.7);
+    .pc_menu {
+        font-weight: 500;
+        a {
+            color: #fff;
+            &:after {
+                border-color: transparent transparent #fff transparent;
+            }
+        }
+    }
+}
+
+.logo {
+    width: 155px;
+    @include trans;
+    @include hover {
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+.pc_menu {
+    ul {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+    }
+    a {
+        position: relative;
+        color: #000;
+        margin-left: 50px;
+        @include trans;
+        @include hover {
+            &:hover {
+                // color: $main;
+                font-weight: bold;
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 6.5px 11px 6.5px;
+            border-color: transparent transparent #386e98 transparent;
+            @extend %X50;
+            bottom: -29px;
+            opacity: 0;
+            @include trans;
+        }
+        @include m-1024 {
+            margin-left: 30px;
+        }
+    }
+    .active {
+        color: $main;
+        font-weight: bold;
+        &:after {
+            opacity: 1;
+        }
+    }
+}
+
+header.scroll {
+    height: 65px;
+    background: #2a2a2a;
+    .pc_menu {
+        a {
+            color: #fff;
+            &:after {
+                bottom: -19px;
+                border-color: transparent transparent #e9e8e9 transparent;
+            }
+        }
+    }
+    .logo {
+        width: 130px;
+    }
+}

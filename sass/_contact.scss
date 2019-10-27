@@ -1,0 +1,107 @@
+.contact_main,
+.link_main {
+    background: url('../img/bg_soft_wallpaper.png');
+    min-height: 100%;
+    position: relative;
+}
+
+.contact_cover {
+    background: url('../img/mask.png') repeat, url('../img/cover_contact.png') no-repeat center bottom / cover;
+    height: 400px;
+    position: relative;
+    @include m-1024 {
+        height: 300px;
+    }
+}
+
+.tt_contact {
+    position: absolute;
+    bottom: 0;
+    left: 125px;
+    width: 465px;
+    opacity: 0.7;
+}
+
+.contact_info {
+    width: 70%;
+    margin: 90px auto;
+    @include media(1580px) {
+        width: 85%;
+    }
+    @include media(1280px) {
+        width: 95%;
+    }
+}
+
+.contact_detail {
+    // display: flex;
+    // justify-content: space-between;
+    text-align: left;
+    p {
+        color: $main;
+        font-size: 1.8rem;
+        // width: (100% / 3)*2;
+        text-align: left;
+        display: inline-block;
+        margin: 0 60px;
+        @include m-1024 {
+            margin: 0 40px;
+        }
+    }
+}
+
+.contact_item {
+    // width: (100% / 3);
+    display: inline-block;
+    margin: 0 60px 100px;
+    @include m-1024 {
+        margin: 0 40px 60px;
+    }
+    li {
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+    }
+    span {
+        &:last-child {
+            opacity: 0.7;
+        }
+    }
+}
+
+.contact_lawyer {
+    font-weight: bold;
+}
+
+.contact_ic_phone {
+    width: 18px;
+    margin-right: 9px;
+}
+
+.contact_ic_add {
+    width: 22px;
+    margin-right: 5px;
+}
+
+.contact_ic_phone,
+.contact_ic_add {
+    display: inline-block;
+}
+
+.contact_fax {
+    width: 289px;
+    text-align: left;
+    margin: 0 60px;
+    display: inline-block;
+    @include m-1024 {
+        margin: 0 40px;
+    }
+}
+
+.tt_fax {
+    color: $main;
+    display: inline-block;
+    margin-right: 40px;
+}

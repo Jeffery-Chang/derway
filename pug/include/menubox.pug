@@ -1,0 +1,79 @@
+#overlay.overlay
+  nav.overlay-menu
+    ul
+      li
+        a(href='concept.html') 品牌概念
+      |       
+      li
+        a(href='#') 建築團隊
+          //add 'sub-open-arrow ' when open tab
+          span.arrow.sub-open-arrow
+            +svg('menu-arrow')
+        .sub(style="display:none")
+          ul
+              li
+                a(href="team-1.html") 城中理念
+              li
+                a(href="team-2.html") 城中實蹟
+              li
+                a(href="team-3.html") 團隊成員
+      |       
+      li
+        a(href='#') 建築規劃
+          span.arrow
+            +svg('menu-arrow')
+        .sub(style="display:none")
+          ul
+              li
+                a(href="archi-1.html") 建築設計理念
+              li
+                a(href="archi-2.html") 立面篇
+              li
+                a(href="archi-3.html") 公設篇
+      |       
+      li
+        a(href='#') 建築工程
+          span.arrow
+            +svg('menu-arrow')
+        .sub(style="display:none")
+          ul
+            li
+              a(href="engrg-1.html") 結構工程
+            li
+              a(href="engrg-2.html") 防水對策
+            li
+              a(href="engrg-3.html") 管道設計
+            li
+              a(href="engrg-4.html") 靜音美學
+            li
+              a(href="engrg-5.html") 活水通風
+      |       
+      li
+        a(href='#') 周邊環境
+          span.arrow
+            +svg('menu-arrow')
+        .sub(style="display:none")
+          ul
+            li
+              a(href="life-1.html") 生活機能圖
+            li
+              a(href="life-2.html") 音樂篇
+            li
+              a(href="life-3.html") 文人篇
+            li
+              a(href="life-4.html") 生活篇
+            li
+              a(href="life-5.html") 交通篇
+      |       
+      li
+        a(href='#') 平面傢配
+          span.arrow
+            +svg('menu-arrow')
+        .sub(style="display:none")
+          ul
+            li
+              a(href="plan-1.html") 傢配圖
+            li
+              a(href="plan-2.html") 墨線圖
+script(src='http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js') 
+script(src='js/vendor/bur.js')

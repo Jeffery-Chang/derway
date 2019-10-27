@@ -1,0 +1,44 @@
+doctype html
+html
+    head
+        include head
+        // own style
+        block own_style
+            link(rel = 'stylesheet', href = '')
+    body
+        
+        block trans
+            include trans
+            // header add'scroll' when scrolling and change logo to white
+        block vars
+        header(class = headerClass)
+            a.logo(href="index.html")
+                block logo
+                    +svg('logo_b')
+            block menu
+                nav.pc_menu
+                    ul
+                        li
+                            block index
+                                a(href="index.html") 回首頁
+                        li
+                            block about
+                                a(href="about.html") 關於德維
+                        li
+                            block news
+                                a(href="news.html") 最新消息
+                        li
+                            block team
+                                a(href="team.html") 專業團隊
+                        li
+                            block column
+                                a(href="legal_column.html") 法律專欄
+                        li
+                            block contact
+                                a(href="contact.html") 聯絡我們
+                        li
+                            block link
+                                a(href="link.html") 關係網站
+        // content
+        .wrap
+            block content

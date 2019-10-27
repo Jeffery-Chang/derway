@@ -1,0 +1,36 @@
+extends ./include/layout
+include ./include/mixin
+block append vars
+	- var headerClass = 'index_header'
+block logo
+	+svg('logo_w')
+block content
+	main.index_main
+		.index_newsBox
+			.tt_index
+				+svg('tt_news')
+			.index_news_list
+				ul
+					li.index_news_items
+						a(href="#")
+							.timeBox
+								span.year 2019
+								span.date 10/16
+							p 本所律師XXX律師獲聘為臺灣律師懲戒委員會委員長
+					li.index_news_items
+						a(href="#")
+							.timeBox
+								span.year 2019
+								span.date 10/16
+							p 「雇主如何防治與處理性騷擾」研討會
+					li.index_news_items
+						a(href="#")
+							.timeBox
+								span.year 2019
+								span.date 10/16
+							p 本所律師XXX律師獲聘為臺灣律師懲戒委員會委員長
+			a.more(href="news.html") 
+				span.line
+				span Read more
+		include ./include/footer
+

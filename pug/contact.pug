@@ -1,0 +1,61 @@
+extends ./include/layout
+include ./include/mixin
+block append vars
+	- var headerClass = 'contact_header'
+block logo
+	+svg('logo_w')
+block contact
+	a.active(href="contact.html") 聯絡我們
+block content
+	main.contact_main
+		.contact_cover
+			.tt_contact
+				+svg('tt_contact')
+		.contact_info
+			.contact_detail
+				.contact_item
+					ul
+						li.contact_lawyer 曾泰源律師、吳育胤律師、李佳怡律師
+						li 
+							span.contact_ic_phone
+								+svg('ic_phone')
+							span 03-8226661
+						li 
+							span.contact_ic_add
+								+svg('ic_add')
+							span 花蓮市府前路126號4樓之1
+				.contact_item
+					ul
+						li.contact_lawyer 張秉正律師、劉彥廷律師
+						li 
+							span.contact_ic_phone
+								+svg('ic_phone')
+							span 03-8226777
+						li 
+							span.contact_ic_add
+								+svg('ic_add')
+							span 花蓮市府前路126號4樓之2
+				.contact_item
+					ul
+						li.contact_lawyer 林國泰律師、洪珮瑜律師
+						li 
+							span.contact_ic_phone
+								+svg('ic_phone')
+							span 03-8232361
+						li 
+							span.contact_ic_add
+								+svg('ic_add')
+							span 花蓮市府前路126-1號
+			.contact_detail
+				.contact_fax
+					span.tt_fax 傳真
+					span 03-8234230
+				p 本所提供免費的簡易法律諮詢，歡迎電話預約來所詢問
+		iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.172550496839!2d121.61953841572657!3d23.989683184471883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34689f80df0faef7%3A0x7aaf8df92cedc9f9!2z5b6357at5rOV5b6L5LqL5YuZ5omA!5e0!3m2!1szh-TW!2stw!4v1571845020794!5m2!1szh-TW!2stw', width='100%', height='500', frameborder='0', style='border:0;', allowfullscreen='')
+		include ./include/footer
+
+
+
+
+
+

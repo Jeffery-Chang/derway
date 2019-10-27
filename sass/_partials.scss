@@ -1,0 +1,28 @@
+.break {
+    display: block;
+}
+
+.break-m {
+    @include m-767 {
+        display: block;
+    }
+}
+
+.none-m {
+    @include m-767 {
+        display: none;
+    }
+}
+
+section {
+    width: 100%;
+    position: relative;
+}
+
+.abs {
+    position: absolute;
+}
+
+.por {
+    position: relative;
+}

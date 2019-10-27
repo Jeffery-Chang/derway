@@ -1,0 +1,96 @@
+.about_main {
+    @extend %bg_wall;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.about_img {
+    width: 43%;
+    position: relative;
+    z-index: 1;
+    @media screen and (max-height: 860px) {
+        width: 35%;
+    }
+    @include pc-1440 {
+        width: 38%;
+    }
+    @include m-1024 {
+        width: 50%;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        @extend %bg_mask;
+        z-index: -1;
+        bottom: -7%;
+        left: -60px;
+        transform: skewX(10deg);
+    }
+}
+
+.about_derway {
+    position: relative;
+    width: 43%;
+    text-align: left;
+    padding: 1% 5% 0;
+    p:first-of-type {
+        font-weight: bold;
+    }
+    p {
+        margin-bottom: 20px;
+        line-height: 26px;
+        @include m-1024 {
+            margin-bottom: 15px;
+        }
+    }
+    @include pc-1440 {
+        width: 50%;
+        padding: 1% 5% 0 8%;
+    }
+    @include media(1366px) {
+        width: 62%;
+        padding: 1% 7% 0 5%;
+    }
+    @include m-1024 {
+        padding: 1% 5% 0;
+    }
+}
+
+.tt_about {
+    width: 100%;
+    max-width: 615px;
+    position: absolute;
+    @extend %tt;
+    top: -45px;
+    left: 3%;
+    @include pc-1440 {
+        max-width: 400px;
+        top: -23px;
+        left: 7%;
+    }
+    @include m-1024 {
+        width: 80%;
+        top: -27px;
+    }
+}
+
+.directorBox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    span {
+        &:first-child {
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        &:last-child {
+            width: 145px;
+            @include m-1024 {
+                width: 125px;
+            }
+        }
+    }
+}

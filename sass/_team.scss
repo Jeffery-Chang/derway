@@ -1,0 +1,96 @@
+.team_main {
+    background: url('../img/bg_struckaxiom.png');
+    min-height: 100%;
+    padding-top: 160px;
+    padding-bottom: 63px;
+    position: relative;
+}
+
+.tt_team {
+    width: 640px;
+    @extend %tt;
+    @extend %X50;
+    top: 170px;
+    @include m-1024 {
+        width: 500px;
+        top: 178px;
+    }
+}
+
+.teamBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.lawyer_picBox {
+    position: relative;
+    margin-right: 80px;
+    z-index: 0;
+    &:after {
+        content: '';
+        position: absolute;
+        background: url(../img/mask.png);
+        @include size(100%);
+        border-radius: 100%;
+        left: -3%;
+        bottom: -2%;
+        z-index: -1;
+    }
+}
+
+.lawyer_pic {
+    @include cir(460px);
+    overflow: hidden;
+    @include m-1024 {
+        @include cir(350px);
+    }
+}
+
+.lawyer_info {
+    text-align: left;
+    h2 {
+        font-size: 3.6rem;
+        @include m-1024 {
+            font-size: 2.4rem;
+        }
+    }
+    h3 {
+        font-size: 1.4rem;
+        font-weight: normal;
+        color: $main;
+        letter-spacing: 1.4px;
+    }
+    li {
+        font-size: 1.6rem;
+        opacity: 0.6;
+        line-height: 30px;
+    }
+}
+
+.lawyer_detail {
+    margin-top: 20px;
+    @include m-1024 {
+        margin-top: 15px;
+    }
+}
+
+.team_odd {
+    flex-direction: row-reverse;
+    background: #cdd8e0;
+    .lawyer_info {
+        text-align: right;
+    }
+    .lawyer_picBox {
+        margin: 0 0 0 80px;
+        &:after {
+            left: 3%;
+            bottom: -2%;
+        }
+    }
+}
+
+.team_long {
+    align-items: flex-start;
+}
