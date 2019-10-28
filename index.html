@@ -16,7 +16,11 @@
     <link rel="icon" href="img/favicon.ico" />
     <!-- css style-->
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/self.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <!-- <script src="js/vendor/jquery-3.2.1.min.js"></script> -->
+    <script src="js/vendor/wow.min.js"></script>
+    <script src="js/vendor/vue.js"></script>
     <!-- own style-->
     <link rel="stylesheet" href="" />
   </head>
@@ -46,9 +50,11 @@
     </header>
     <!-- content-->
     <div class="wrap">
-      <main class="index_main">
+      <main class="index_main" v-cloak>
         <div class="index_newsBox">
-          <div class="tt_index"><img src="img/tt_news.svg" /></div>
+          <div class="wow fadeIn">
+            <div class="tt_index"><img src="img/tt_news.svg" /></div>
+          </div>
           <div class="index_news_list">
             <ul>
               <li class="index_news_items">
@@ -78,5 +84,7 @@
         </footer>
       </main>
     </div>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

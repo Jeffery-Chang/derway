@@ -16,7 +16,10 @@
     <link rel="icon" href="img/favicon.ico" />
     <!-- css style-->
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/self.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <!-- <script src="js/vendor/jquery-3.2.1.min.js"></script> -->
+    <script src="js/vendor/wow.min.js"></script>
     <!-- own style-->
     <link rel="stylesheet" href="" />
   </head>
@@ -48,11 +51,13 @@
     <div class="wrap">
       <main class="contact_main">
         <div class="contact_cover">
-          <div class="tt_contact"><img src="img/tt_contact.svg" /></div>
+          <div class="wow fadeIn">
+            <div class="tt_contact"><img src="img/tt_contact.svg" /></div>
+          </div>
         </div>
         <div class="contact_info">
           <div class="contact_detail">
-            <div class="contact_item">
+            <div class="contact_item wow fadeInUp">
               <ul>
                 <li class="contact_lawyer">曾泰源律師、吳育胤律師、李佳怡律師</li>
                 <li>
@@ -63,7 +68,7 @@
                 </li>
               </ul>
             </div>
-            <div class="contact_item">
+            <div class="contact_item wow fadeInUp">
               <ul>
                 <li class="contact_lawyer">張秉正律師、劉彥廷律師</li>
                 <li>
@@ -74,7 +79,7 @@
                 </li>
               </ul>
             </div>
-            <div class="contact_item">
+            <div class="contact_item wow fadeInUp">
               <ul>
                 <li class="contact_lawyer">林國泰律師、洪珮瑜律師</li>
                 <li>
@@ -86,7 +91,7 @@
               </ul>
             </div>
           </div>
-          <div class="contact_detail">
+          <div class="contact_detail wow fadeInUp">
             <div class="contact_fax"><span class="tt_fax">傳真</span><span>03-8234230</span></div>
             <p>本所提供免費的簡易法律諮詢，歡迎電話預約來所詢問</p>
           </div>
@@ -104,5 +109,6 @@
         </footer>
       </main>
     </div>
+    <script src="js/common.js"></script>
   </body>
 </html>
