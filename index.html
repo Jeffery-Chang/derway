@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/self.css" />
     <link rel="stylesheet" href="css/animate.min.css" />
     <!-- <script src="js/vendor/jquery-3.2.1.min.js"></script> -->
+    <script src="js/vendor/polyfill.min.js"></script>
+    <script src="js/vendor/axios.min.js"></script>
     <script src="js/vendor/wow.min.js"></script>
     <script src="js/vendor/vue.js"></script>
     <!-- own style-->
@@ -57,22 +59,10 @@
           </div>
           <div class="index_news_list">
             <ul>
-              <li class="index_news_items">
-                <a href="#">
-                  <div class="timeBox"><span class="year">2019</span><span class="date">10/16</span></div>
-                  <p>本所律師XXX律師獲聘為臺灣律師懲戒委員會委員長</p></a
-                >
-              </li>
-              <li class="index_news_items">
-                <a href="#">
-                  <div class="timeBox"><span class="year">2019</span><span class="date">10/16</span></div>
-                  <p>「雇主如何防治與處理性騷擾」研討會</p></a
-                >
-              </li>
-              <li class="index_news_items">
-                <a href="#">
-                  <div class="timeBox"><span class="year">2019</span><span class="date">10/16</span></div>
-                  <p>本所律師XXX律師獲聘為臺灣律師懲戒委員會委員長</p></a
+              <li class="index_news_items" v-for="item in list">
+                <a :href="item.href">
+                  <div class="timeBox"><span class="year">{{ item.year }}</span><span class="date">{{ item.date() }}</span></div>
+                  <p>{{ item.title }}</p></a
                 >
               </li>
             </ul>

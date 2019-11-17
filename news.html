@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="css/animate.min.css" />
     <!-- <script src="js/vendor/jquery-3.2.1.min.js"></script> -->
     <script src="js/vendor/wow.min.js"></script>
+    <script src="js/vendor/polyfill.min.js"></script>
+    <script src="js/vendor/axios.min.js"></script>
+    <script src="js/vendor/wow.min.js"></script>
+    <script src="js/vendor/vue.js"></script>
     <!-- own style-->
     <link rel="stylesheet" href="" />
   </head>
@@ -49,55 +53,13 @@
     </header>
     <!-- content-->
     <div class="wrap">
-      <main class="news_main">
+      <main class="news_main" v-cloak>
         <div class="tt_news"><img src="img/tt_news.svg" /></div>
         <div class="ListBox">
           <ul>
-            <li class="news_items">
-              <a href="news_article.html"
-                ><span class="news_info"><span class="news_time">2019-08-20</span><span class="news_tt">育嬰留職停薪 (上)</span></span
-                ><span class="btn_go"><img src="img/arrow.svg"/></span
-              ></a>
-            </li>
-            <li class="news_items">
-              <a href="#"
-                ><span class="news_info"><span class="news_time">2019-08-20</span><span class="news_tt">育嬰留職停薪 (上)</span></span
-                ><span class="btn_go"><img src="img/arrow.svg"/></span
-              ></a>
-            </li>
-            <li class="news_items">
-              <a href="#"
-                ><span class="news_info"><span class="news_time">2019-08-20</span><span class="news_tt">育嬰留職停薪 (上)</span></span
-                ><span class="btn_go"><img src="img/arrow.svg"/></span
-              ></a>
-            </li>
-            <li class="news_items">
-              <a href="#"
-                ><span class="news_info"><span class="news_time">2019-08-20</span><span class="news_tt">育嬰留職停薪 (上)</span></span
-                ><span class="btn_go"><img src="img/arrow.svg"/></span
-              ></a>
-            </li>
-            <li class="news_items">
-              <a href="#"
-                ><span class="news_info"><span class="news_time">2019-08-20</span><span class="news_tt">育嬰留職停薪 (上)</span></span
-                ><span class="btn_go"><img src="img/arrow.svg"/></span
-              ></a>
-            </li>
-            <li class="news_items">
-              <a href="#"
-                ><span class="news_info"><span class="news_time">2019-08-20</span><span class="news_tt">育嬰留職停薪 (上)</span></span
-                ><span class="btn_go"><img src="img/arrow.svg"/></span
-              ></a>
-            </li>
-            <li class="news_items">
-              <a href="#"
-                ><span class="news_info"><span class="news_time">2019-08-20</span><span class="news_tt">育嬰留職停薪 (上)</span></span
-                ><span class="btn_go"><img src="img/arrow.svg"/></span
-              ></a>
-            </li>
-            <li class="news_items">
-              <a href="#"
-                ><span class="news_info"><span class="news_time">2019-08-20</span><span class="news_tt">育嬰留職停薪 (上)</span></span
+            <li class="news_items" v-for="item in list">
+              <a :href="item.href"
+                ><span class="news_info"><span class="news_time">{{ item.date }}</span><span class="news_tt">{{ item.title }}</span></span
                 ><span class="btn_go"><img src="img/arrow.svg"/></span
               ></a>
             </li>
@@ -109,5 +71,6 @@
       </main>
     </div>
     <script src="js/common.js"></script>
+    <script src="js/news.js"></script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 /* 串`最新消息`api 產生列表 */
 (function() {
   new Vue({
-    el: ".index_main",
+    el: ".news_main",
     data: {
       list: []
     },
@@ -17,21 +17,10 @@
           .then(res => {
             var array = res.data.data.length > 0 ? res.data.data : [];
             this.list = [];
-            array.forEach((obj, key) => {
-              if (key > 2) return;
+            array.forEach(obj => {
               this.list.push({
                 id: obj.id,
-                year: new Date(obj.date).getFullYear(),
-                date: () => {
-                  var month = new Date(obj.date).getMonth() + 1;
-                  var day = new Date(obj.date).getDate();
-
-                  function fillZero(num) {
-                    return num < 10 ? `0${num}` : num;
-                  }
-
-                  return `${fillZero(month)}/${fillZero(day)}`;
-                },
+                date: obj.date,
                 title: obj.title,
                 href: `news_article.html?id=${obj.id}`
               });
