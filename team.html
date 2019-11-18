@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="css/animate.min.css" />
     <!-- <script src="js/vendor/jquery-3.2.1.min.js"></script> -->
     <script src="js/vendor/wow.min.js"></script>
+    <script src="js/vendor/polyfill.min.js"></script>
+    <script src="js/vendor/axios.min.js"></script>
+    <script src="js/vendor/wow.min.js"></script>
+    <script src="js/vendor/vue.js"></script>
     <!-- own style-->
     <link rel="stylesheet" href="" />
   </head>
@@ -49,197 +53,32 @@
     </header>
     <!-- content-->
     <div class="wrap">
-      <main class="team_main">
+      <main class="team_main" v-cloak>
         <div class="wow fadeIn">
           <div class="tt_team"><img src="img/tt_team.svg" /></div>
         </div>
-        <section class="teamBox">
+        <section class="teamBox" :class="{ 'team_odd' : $index % 2 == 0 }" v-for="(item, $index) in list">
           <div class="lawyer_picBox wow fadeInUp">
-            <div class="lawyer_pic"><img src="img/team/lawyer1.png" alt="" /></div>
+            <div class="lawyer_pic"><img :src="item.image" alt="" /></div>
           </div>
           <div class="lawyer_info wow fadeInUp">
-            <h2>曾泰源 律師</h2>
+            <h2>{{ item.name }} 律師</h2>
             <div class="lawyer_detail">
               <h3>EDUCATION</h3>
               <ul>
-                <li>中興大學法律系畢業</li>
-                <li>文化大學法學碩士</li>
+                <li v-for="edu in item.education">{{ edu }}</li>
               </ul>
             </div>
             <div class="lawyer_detail">
               <h3>EXPERIENCE</h3>
               <ul>
-                <li>司法官特考、律師高考及格</li>
-                <li>司法官訓練所第二十七期結業</li>
-                <li>臺灣花蓮地方檢察署檢察官</li>
-                <li>花蓮律師公會理事長</li>
-                <li>中華民國律師公會全國聯合會理事</li>
+                <li v-for="exp in item.experience">{{ exp }}</li>
               </ul>
             </div>
-          </div>
-        </section>
-        <section class="teamBox team_odd team_long">
-          <div class="lawyer_picBox wow fadeInUp">
-            <div class="lawyer_pic"><img src="img/team/lawyer2.png" alt="" /></div>
-          </div>
-          <div class="lawyer_info wow fadeInUp">
-            <h2>張秉正 律師</h2>
-            <div class="lawyer_detail">
-              <h3>EDUCATION</h3>
-              <ul>
-                <li>東吳大學法律學士</li>
-                <li>海洋大學海洋法律研究所法學碩士</li>
-                <li>文化大學博士候選</li>
-              </ul>
-            </div>
-            <div class="lawyer_detail">
-              <h3>EXPERIENCE</h3>
-              <ul>
-                <li>大漢技術學院法律兼任講師</li>
-                <li>國立空中大學法律兼任講師、國立東華大學法律兼任講師</li>
-                <li>花蓮縣政府民眾法律扶助顧問、花蓮縣醫事審議委員</li>
-                <li>花蓮縣教師申訴評議委員、國防部海軍總司令國賠審議委員</li>
-                <li>花蓮縣政府訴願審議委員、花蓮縣政府國賠審議委員</li>
-                <li>花蓮縣政府醫事審議委員、消基會花東分會委員</li>
-              </ul>
-            </div>
-            <div class="lawyer_detail">
+            <div class="lawyer_detail" v-if="item.position && item.position.length > 0">
               <h3>CURRENT POSITION</h3>
               <ul>
-                <li>張秉正律師事務所主持律師</li>
-                <li>中華民國仲裁協會仲裁人</li>
-                <li>國立東華大學法律兼任講師</li>
-                <li>花蓮縣政府民眾法律扶助顧問</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section class="teamBox team_long">
-          <div class="lawyer_picBox wow fadeInUp">
-            <div class="lawyer_pic"><img src="img/team/lawyer3.png" alt="" /></div>
-          </div>
-          <div class="lawyer_info wow fadeInUp">
-            <h2>林國泰 律師</h2>
-            <div class="lawyer_detail">
-              <h3>EDUCATION</h3>
-              <ul>
-                <li>輔仁大學法律系司法組畢業、</li>
-                <li>國立東華大學財經法律研究所大陸法制組碩士</li>
-              </ul>
-            </div>
-            <div class="lawyer_detail">
-              <h3>EXPERIENCE</h3>
-              <ul>
-                <li>曾任職永然聯合法律事務所、</li>
-                <li>永然文化出版股份有限公司企畫部主任、</li>
-                <li>「法律與你」雜誌法律專欄作者；</li>
-                <li>司法官特考、律師高考雙榜及格、專利代理人檢覈及格</li>
-                <li>司法官訓練所第三十四期結業、台灣花蓮地方法院法官</li>
-                <li>花蓮律師公會理事長、臺灣律師懲戒委員會委員長、</li>
-                <li>中華民國律師公會全國聯合會副理事長（第十屆第三任）</li>
-                <li>中華人權協會東台灣人權論壇主任委員、</li>
-                <li>中華民國律師公會全國聯合會107年度優秀公益律師</li>
-              </ul>
-            </div>
-            <div class="lawyer_detail">
-              <h3>CURRENT POSITION</h3>
-              <ul>
-                <li>中華民國律師公會全國聯合會理事（第十一屆）</li>
-                <li>財團法人法律扶助基金會花蓮分會會長</li>
-                <li>門諾基金會常務董事</li>
-                <li>花蓮縣政府訴願審議委員</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section class="teamBox team_odd">
-          <div class="lawyer_picBox wow fadeInUp">
-            <div class="lawyer_pic"><img src="img/team/lawyer4.png" alt="" /></div>
-          </div>
-          <div class="lawyer_info wow fadeInUp">
-            <h2>洪珮瑜 律師</h2>
-            <div class="lawyer_detail">
-              <h3>EDUCATION</h3>
-              <ul>
-                <li>台北大學法律學士</li>
-              </ul>
-            </div>
-            <div class="lawyer_detail">
-              <h3>EXPERIENCE</h3>
-              <ul>
-                <li>桃園地方法院法官助理</li>
-                <li>花蓮地方法院法官助理</li>
-                <li>花蓮縣警察局法律諮詢委員會委員</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section class="teamBox">
-          <div class="lawyer_picBox wow fadeInUp">
-            <div class="lawyer_pic"><img src="img/team/lawyer5.png" alt="" /></div>
-          </div>
-          <div class="lawyer_info wow fadeInUp">
-            <h2>劉彥廷 律師</h2>
-            <div class="lawyer_detail">
-              <h3>EDUCATION</h3>
-              <ul>
-                <li>輔仁大學財經法律系畢業</li>
-              </ul>
-            </div>
-            <div class="lawyer_detail">
-              <h3>EXPERIENCE</h3>
-              <ul>
-                <li>臺灣臺北地方法院法官助理</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section class="teamBox team_odd team_long">
-          <div class="lawyer_picBox wow fadeInUp">
-            <div class="lawyer_pic"><img src="img/team/lawyer6.png" alt="" /></div>
-          </div>
-          <div class="lawyer_info wow fadeInUp">
-            <h2>吳育胤 律師</h2>
-            <div class="lawyer_detail">
-              <h3>EDUCATION</h3>
-              <ul>
-                <li>臺灣大學法律學系法學組畢業</li>
-                <li>臺灣大學法學碩士</li>
-              </ul>
-            </div>
-            <div class="lawyer_detail">
-              <h3>EXPERIENCE</h3>
-              <ul>
-                <li>國立東華大學兼任講師</li>
-                <li>國立空中大學兼任講師</li>
-              </ul>
-            </div>
-            <div class="lawyer_detail">
-              <h3>CURRENT POSITION</h3>
-              <ul>
-                <li>中華民國律師公會全國聯合會副祕書長</li>
-                <li>黎明教養院服務使用者權益保障委任會委員</li>
-                <li>花蓮高爾夫球場法律顧問</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section class="teamBox">
-          <div class="lawyer_picBox wow fadeInUp">
-            <div class="lawyer_pic"><img src="img/team/lawyer7.png" alt="" /></div>
-          </div>
-          <div class="lawyer_info wow fadeInUp">
-            <h2>李佳怡 律師</h2>
-            <div class="lawyer_detail">
-              <h3>EDUCATION</h3>
-              <ul>
-                <li>臺北大學法律學系司法組畢業</li>
-              </ul>
-            </div>
-            <div class="lawyer_detail">
-              <h3>EXPERIENCE</h3>
-              <ul>
-                <li>律師高考（勞動法組）及格</li>
+                <li v-for="position in item.position">{{ position }}</li>
               </ul>
             </div>
           </div>
@@ -250,5 +89,6 @@
       </main>
     </div>
     <script src="js/common.js"></script>
+    <script src="js/team.js"></script>
   </body>
 </html>
