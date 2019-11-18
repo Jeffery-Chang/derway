@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="css/animate.min.css" />
     <!-- <script src="js/vendor/jquery-3.2.1.min.js"></script> -->
     <script src="js/vendor/wow.min.js"></script>
+    <script src="js/vendor/polyfill.min.js"></script>
+    <script src="js/vendor/axios.min.js"></script>
+    <script src="js/vendor/wow.min.js"></script>
+    <script src="js/vendor/vue.js"></script>
     <!-- own style-->
     <link rel="stylesheet" href="" />
   </head>
@@ -53,40 +57,10 @@
         <div class="tt_column"><img src="img/tt_column.svg" /></div>
         <div class="ListBox">
           <ul>
-            <li class="column_items">
-              <p>刑事案件被告得以適當方式適時獲知其被訴案件之卷宗及證物全部內容</p>
-              <a href="#"
-                ><span>司法院大法官會議解釋第762號解釋文</span><span class="btn_arrow"><img src="img/arrow2.svg"/></span
-              ></a>
-            </li>
-            <li class="column_items">
-              <p>刑事案件被告得以適當方式適時獲知其被訴案件之卷宗及證物全部內容</p>
-              <a href="#"
-                ><span>司法院大法官會議解釋第762號解釋文</span><span class="btn_arrow"><img src="img/arrow2.svg"/></span
-              ></a>
-            </li>
-            <li class="column_items">
-              <p>刑事案件被告得以適當方式適時獲知其被訴案件之卷宗及證物全部內容</p>
-              <a href="#"
-                ><span>司法院大法官會議解釋第762號解釋文</span><span class="btn_arrow"><img src="img/arrow2.svg"/></span
-              ></a>
-            </li>
-            <li class="column_items">
-              <p>刑事案件被告得以適當方式適時獲知其被訴案件之卷宗及證物全部內容</p>
-              <a href="#"
-                ><span>司法院大法官會議解釋第762號解釋文</span><span class="btn_arrow"><img src="img/arrow2.svg"/></span
-              ></a>
-            </li>
-            <li class="column_items">
-              <p>刑事案件被告得以適當方式適時獲知其被訴案件之卷宗及證物全部內容</p>
-              <a href="#"
-                ><span>司法院大法官會議解釋第762號解釋文</span><span class="btn_arrow"><img src="img/arrow2.svg"/></span
-              ></a>
-            </li>
-            <li class="column_items">
-              <p>刑事案件被告得以適當方式適時獲知其被訴案件之卷宗及證物全部內容</p>
-              <a href="#"
-                ><span>司法院大法官會議解釋第762號解釋文</span><span class="btn_arrow"><img src="img/arrow2.svg"/></span
+            <li class="column_items wow fadeInUp" v-for="item in list">
+              <p>{{ item.title }}</p>
+              <a :href="item.href" target="_blank"
+                ><span>{{ item.btn }}</span><span class="btn_arrow"><img src="img/arrow2.svg"/></span
               ></a>
             </li>
           </ul>
@@ -97,5 +71,6 @@
       </main>
     </div>
     <script src="js/common.js"></script>
+    <script src="js/legal_column.js"></script>
   </body>
 </html>
