@@ -38,7 +38,7 @@
             this.article = res.data.data;
           })
           .catch(err => {
-            alert("最新消息列表取得失敗！");
+            alert("最新消息資料取得失敗！");
           });
       }
     }
