@@ -66,10 +66,10 @@
             <div class="lawyer_detail">
               <h3>EDUCATION</h3>
               <ul>
-                <li v-for="edu in item.education">{{ edu }}</li>
+                <li v-for="edu in item.education" v-if="item.education && item.education.length > 0">{{ edu }}</li>
               </ul>
             </div>
-            <div class="lawyer_detail">
+            <div class="lawyer_detail" v-if="item.experience && item.experience.length > 0">
               <h3>EXPERIENCE</h3>
               <ul>
                 <li v-for="exp in item.experience">{{ exp }}</li>
