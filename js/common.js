@@ -35,11 +35,15 @@ window.onload = function() {
 
   new WOW().init();
 
+  var logo = document.querySelector("header .logo img") ? document.querySelector("header .logo img").getAttribute("src") : null;
+
   window.addEventListener("scroll", function() {
     if (window.scrollY > document.querySelector("header").offsetHeight) {
       document.querySelector("header").classList.add("scroll");
+      document.querySelector("header .logo img").setAttribute("src", "img/logo_w.svg");
     } else {
       document.querySelector("header").classList.remove("scroll");
+      document.querySelector("header .logo img").setAttribute("src", logo);
     }
   });
 };

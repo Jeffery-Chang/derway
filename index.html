@@ -59,7 +59,7 @@
           </div>
           <div class="index_news_list">
             <ul>
-              <li class="index_news_items" v-for="item in list">
+              <li class="index_news_items wow fadeInUp" v-for="(item, $index) in list" :data-wow-delay="`${200 * $index}ms`">
                 <a :href="item.href">
                   <div class="timeBox"><span class="year">{{ item.year }}</span><span class="date">{{ item.date() }}</span></div>
                   <p>{{ item.title }}</p></a
@@ -67,7 +67,7 @@
               </li>
             </ul>
           </div>
-          <a class="more" href="news.html"> <span class="line"></span><span>Read more</span></a>
+          <a class="more wow fadeInUp" href="news.html" data-wow-delay="600ms"> <span class="line"></span><span>Read more</span></a>
         </div>
         <footer>
           <p>© Derway Law Firm. ALL RIGHTS RESERVED.</p>
