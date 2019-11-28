@@ -61,9 +61,7 @@
             <h3>{{ article.title }}</h3>
             <span>{{ article.date }}</span>
           </div>
-          <section>
-            {{ article.content }}
-          </section>
+          <section v-html="article.content"></section>
         </article>
         <footer>
           <p>© Derway Law Firm. ALL RIGHTS RESERVED.</p>

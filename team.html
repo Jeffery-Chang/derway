@@ -57,7 +57,7 @@
         <div class="wow fadeIn">
           <div class="tt_team"><img src="img/tt_team.svg" /></div>
         </div>
-        <section class="teamBox" :class="{ 'team_odd' : $index % 2 == 0 }" v-for="(item, $index) in list">
+        <section class="teamBox" :class="{ 'team_odd' : $index % 2 == 0, 'team_long' : item.isLong }" v-for="(item, $index) in list">
           <div class="lawyer_picBox wow fadeInUp">
             <div class="lawyer_pic"><img :src="item.image" alt="" /></div>
           </div>

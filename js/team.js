@@ -18,13 +18,18 @@
             var array = res.data.data.length > 0 ? res.data.data : [];
             this.list = [];
             array.forEach(obj => {
+              // 太長的加上class
+              var edu = obj.education.length || 0;
+              var exp = obj.experience.length || 0;
+              var pos = obj.position.length || 0;
               this.list.push({
                 id: obj.id,
                 name: obj.name,
                 education: obj.education,
                 experience: obj.experience,
                 position: obj.position,
-                image: obj.filename
+                image: obj.filename,
+                isLong: edu + exp + pos > 7
               });
             });
           })
