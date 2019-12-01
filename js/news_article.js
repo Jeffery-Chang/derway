@@ -36,7 +36,6 @@
         })
           .then(res => {
             this.article = res.data.data;
-            console.log(res.data.data);
           })
           .catch(err => {
             alert("最新消息資料取得失敗！");
