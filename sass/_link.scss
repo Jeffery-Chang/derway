@@ -23,6 +23,7 @@
     width: 410px;
     right: 227px;
     bottom: 92px;
+    pointer-events: none;
     @include pc-1440 {
         width: 315px;
         right: 124px;

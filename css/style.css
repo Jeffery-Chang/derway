@@ -1126,14 +1126,16 @@ article {
     font-size: 1.4rem;
     opacity: 0.5; }
 
-article {
+article section {
+  text-align: left; }
+
+article p {
   font-size: 18px;
   font-size: 1.8rem;
   opacity: 0.7;
   line-height: 37px;
-  letter-spacing: 1px; }
-  article section {
-    text-align: left; }
+  letter-spacing: 1px;
+  margin-bottom: 25px; }
 
 .btn_back {
   color: #386e98;
@@ -1431,7 +1433,8 @@ article {
   position: absolute;
   width: 410px;
   right: 227px;
-  bottom: 92px; }
+  bottom: 92px;
+  pointer-events: none; }
   @media screen and (max-width: 1440px) {
     .link_deco {
       width: 315px;
@@ -1495,3 +1498,5 @@ article {
 
 .link_list {
   margin: 0 30px; }
+
+/*# sourceMappingURL=style.css.map */
