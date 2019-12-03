@@ -33,7 +33,8 @@
                   return `${fillZero(month)}/${fillZero(day)}`;
                 },
                 title: obj.title,
-                href: `news_article.html?id=${obj.id}`
+                href: `article.html?id=${obj.id}`,
+                delay: `${0.2 * key}s`
               });
             });
           })

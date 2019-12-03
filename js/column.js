@@ -1,7 +1,7 @@
-/* 串`法律專欄`api 產生列表 */
+/* 串`最新消息`api 產生列表 */
 (function() {
   new Vue({
-    el: ".column_main",
+    el: ".news_main",
     data: {
       list: []
     },
@@ -12,7 +12,7 @@
       getList() {
         axios({
           method: "get",
-          url: "https://derway.tw/admin/api/legal"
+          url: "https://derway.tw/admin/api/news"
         })
           .then(res => {
             var array = res.data.data.length > 0 ? res.data.data : [];
@@ -22,13 +22,12 @@
                 id: obj.id,
                 date: obj.date,
                 title: obj.title,
-                btn: obj.link_title,
-                href: obj.link_content
+                href: `article.html?id=${obj.id}`
               });
             });
           })
           .catch(err => {
-            alert("法律專欄列表取得失敗！");
+            alert("最新消息列表取得失敗！");
           });
       }
     }
