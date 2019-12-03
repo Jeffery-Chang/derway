@@ -9,15 +9,15 @@
 
 .tt_news {
     position: fixed;
-    left: -150px;
-    top: 30%;
-    width: 400px;
+    left: -225px;
+    top: 45%;
+    width: 530px;
     transform: rotate(90deg);
     @extend %tt;
     @include pc-1440 {
-        left: -130px;
-        width: 345px;
-        top: 40%;
+        left: -186px;
+        top: 46%;
+        width: 440px;
     }
 }
 

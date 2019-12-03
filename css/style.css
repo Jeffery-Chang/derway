@@ -833,7 +833,7 @@ footer {
       left: 10%; } }
 
 .tt_index {
-  width: 450px; }
+  width: 480px; }
 
 .index_news_list {
   margin-left: 75px;
@@ -1038,16 +1038,16 @@ footer {
 
 .tt_news {
   position: fixed;
-  left: -150px;
-  top: 30%;
-  width: 400px;
+  left: -225px;
+  top: 45%;
+  width: 530px;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg); }
   @media screen and (max-width: 1440px) {
     .tt_news {
-      left: -130px;
-      width: 345px;
-      top: 40%; } }
+      left: -186px;
+      top: 46%;
+      width: 440px; } }
 
 .ListBox,
 article {
@@ -1166,14 +1166,14 @@ article p {
       left: 2%; } }
 
 .tt_column {
-  width: 65px;
+  width: 100px;
   position: fixed;
   top: 14%;
   left: -2px; }
   @media screen and (max-width: 1440px) {
     .tt_column {
-      width: 53px;
-      top: 17%; } }
+      width: 80px;
+      top: 21%; } }
 
 .column_items {
   font-size: 18px;

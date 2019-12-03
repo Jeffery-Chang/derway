@@ -1,12 +1,12 @@
 .tt_column {
-    width: 65px;
+    width: 100px;
     @extend %tt;
     position: fixed;
     top: 14%;
     left: -2px;
     @include pc-1440 {
-        width: 53px;
-        top: 17%;
+        width: 80px;
+        top: 21%;
     }
 }
 
