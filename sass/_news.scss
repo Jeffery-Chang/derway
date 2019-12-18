@@ -9,15 +9,15 @@
 
 .tt_news {
     position: fixed;
-    left: -225px;
-    top: 45%;
-    width: 530px;
+    left: -170px;
+    top: 30%;
+    width: 400px;
     transform: rotate(90deg);
     @extend %tt;
     @include pc-1440 {
-        left: -186px;
-        top: 46%;
-        width: 440px;
+        left: -145px;
+        width: 345px;
+        top: 40%;
     }
 }
 
@@ -103,12 +103,10 @@ article {
     section {
         text-align: left;
     }
-    
-        font-size: 1.8rem;
-        opacity: 0.7;
-        line-height: 37px;
-        letter-spacing: 1px;
-    
+    font-size: 1.8rem;
+    opacity: 0.7;
+    line-height: 37px;
+    letter-spacing: 1px;
 }
 
 .btn_back {

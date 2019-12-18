@@ -154,19 +154,22 @@ h6 {
   font-family: 'Noto Sans TC';
   font-style: normal;
   font-weight: 400;
-  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format("opentype"); }
+  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format("opentype");
+  font-display: swap; }
 
 @font-face {
   font-family: 'Noto Sans TC';
   font-style: normal;
   font-weight: 500;
-  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.otf) format("opentype"); }
+  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.otf) format("opentype");
+  font-display: swap; }
 
 @font-face {
   font-family: 'Noto Sans TC';
   font-style: normal;
   font-weight: 700;
-  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.otf) format("opentype"); }
+  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.otf) format("opentype");
+  font-display: swap; }
 
 .tt_index, .tt_about, .tt_news, .tt_column, .tt_team {
   opacity: 0.2; }
@@ -812,7 +815,8 @@ footer {
   font-size: 1.4rem;
   position: absolute;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  pointer-events: none; }
 
 .index_main {
   width: 100%;
@@ -832,7 +836,7 @@ footer {
       left: 10%; } }
 
 .tt_index {
-  width: 450px; }
+  width: 480px; }
 
 .index_news_list {
   margin-left: 75px;
@@ -1037,14 +1041,14 @@ footer {
 
 .tt_news {
   position: fixed;
-  left: -150px;
+  left: -170px;
   top: 30%;
   width: 400px;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg); }
   @media screen and (max-width: 1440px) {
     .tt_news {
-      left: -130px;
+      left: -145px;
       width: 345px;
       top: 40%; } }
 
@@ -1163,14 +1167,14 @@ article {
       left: 2%; } }
 
 .tt_column {
-  width: 65px;
+  width: 100px;
   position: fixed;
   top: 14%;
   left: -2px; }
   @media screen and (max-width: 1440px) {
     .tt_column {
-      width: 53px;
-      top: 17%; } }
+      width: 80px;
+      top: 21%; } }
 
 .column_items {
   font-size: 18px;
@@ -1440,7 +1444,8 @@ article {
   @media screen and (max-width: 1024px) {
     .link_deco {
       width: 222px;
-      right: 200px; } }
+      right: 200px;
+      bottom: 55px; } }
 
 .tt_link {
   width: 550px;

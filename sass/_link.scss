@@ -23,16 +23,15 @@
     width: 410px;
     right: 227px;
     bottom: 92px;
-    pointer-events: none;
     @include pc-1440 {
         width: 315px;
         right: 124px;
         bottom: 98px;
     }
     @include m-1024 {
-        width: 300px;
-        right: 100px;
-        bottom: 60px;
+        width: 222px;
+    right: 200px;
+    bottom: 55px;
     }
 }
 
