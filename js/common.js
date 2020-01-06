@@ -37,8 +37,10 @@ window.onload = function() {
 
   var logo = document.querySelector("header .logo img") ? document.querySelector("header .logo img").getAttribute("src") : null;
 
-  window.addEventListener("scroll", function() {
-    if (window.scrollY > document.querySelector("header").offsetHeight) {
+  // 2020-01-06 修正IE11捲軸問題
+  window.addEventListener("scroll", () => {
+    var offsetY = window.scrollY || document.documentElement.scrollTop;
+    if (offsetY > document.querySelector("header").offsetHeight) {
       document.querySelector("header").classList.add("scroll");
       document.querySelector("header .logo img").setAttribute("src", "img/logo_w.svg");
     } else {
